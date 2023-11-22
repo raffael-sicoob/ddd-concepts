@@ -1,5 +1,5 @@
 import { Customer } from "./entity/customer.entity";
-import { Address } from "./entity/value-objects/address";
+import { Address } from "./value-objects/address";
 
 const customer = new Customer(
   "1",
