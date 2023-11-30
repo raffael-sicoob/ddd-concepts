@@ -32,3 +32,34 @@ Exemplos de Value Objects:
 - Address: um objeto que representa um endereço, com atributos como rua, número, cidade, etc.
 - DateRange: um objeto que representa um intervalo de datas, com atributos como data inicial e data final.
 - PhoneNumber: um objeto que representa um número de telefone, com atributos como código de área e número.
+
+## Aggregates
+
+> "É um conjunto de objetos associados que tratamos como uma unidade para o propósito de mudança de dados."
+---
+
+Principais características dos Aggregates:
+
+- Consistência transacional: Todas as alterações em objetos dentro de um aggregate devem ser tratadas como uma única transação.
+- Raiz do Aggregate: Cada aggregate possui uma raiz, que é uma entidade que atua como ponto de acesso para o aggregate.
+- Invariante do Aggregate: Os objetos dentro de um aggregate devem ser consistentes entre si e respeitar as regras de negócio definidas.
+- Controle de Acesso: Acesso a objetos dentro de um aggregate deve ser feito através da raiz do aggregate, garantindo a consistência dos dados.
+
+Exemplos de Aggregates:
+
+1. OrderAggregate:
+   - Descrição: Agregado que representa um pedido de compra.
+   - Componentes: OrderEntity (raiz do aggregate), OrderItemEntity, CustomerEntity, AddressValueObject, PaymentMethodValueObject, etc.
+
+2. ShoppingCartAggregate:
+   - Descrição: Agregado que representa o carrinho de compras de um cliente.
+   - Componentes: ShoppingCartEntity (raiz do aggregate), CartItemEntity, ProductEntity, etc.
+
+3. BlogPostAggregate:
+   - Descrição: Agregado que representa um post de um blog.
+   - Componentes: BlogPostEntity (raiz do aggregate), CommentEntity, AuthorEntity, etc.
+
+4. UserAccountAggregate:
+   - Descrição: Agregado que representa a conta de um usuário.
+
+   - Componentes: UserAccountEntity (raiz do aggregate), ProfileEntity, AddressValueObject, CreditCardEntity, etc.

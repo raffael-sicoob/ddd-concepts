@@ -30,4 +30,23 @@ export class Customer {
   get address() {
     return this._address.toString();
   }
+
+  changeName(name: string) {
+    this._name = name;
+    this.validade();
+  }
+
+  activate() {
+    if (!this._address)
+      throw new Error("Address is mandatory to activate a customer");
+    this._active = true;
+  }
+
+  deactivate() {
+    this._active = false;
+  }
+
+  get isActive() {
+    return this._active;
+  }
 }
