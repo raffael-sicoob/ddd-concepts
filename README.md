@@ -1,5 +1,7 @@
 # ddd-concepts
 
+![Schema DDD - Onion Architecture](image-1.png)![Schema DDD - Clean Architecture](image.png)
+
 ## Entities
 
 > "É algo único que é capaz de ser alterado de forma contínua durante um longo período de tempo."
@@ -63,3 +65,24 @@ Exemplos de Aggregates:
    - Descrição: Agregado que representa a conta de um usuário.
 
    - Componentes: UserAccountEntity (raiz do aggregate), ProfileEntity, AddressValueObject, CreditCardEntity, etc.
+
+## Domain Services
+
+> "Um Domain Service é uma operação sem estado que cumpre uma tarefa específica do domínio."
+---
+
+Principais serviços dos Domain Services:
+
+- Pode ser usado quando uma operação que precisa ser executada não se encaixa em um aggregate ou value object.
+- Uma pode realizar uma ação que pode afetar todas as entidades?
+- Como pode ser possível realizar uma operação em lote?
+- Como calcular algo cuja as informações constam em mais de uma entidade?
+
+Cuidados com o Domain Service:
+
+- Quando estiver muitos Domain Services no projeto, pode ser que os Aggregates estão anêmicos.
+- Domain Services são stateless, ou seja, não armazenam estado.
+
+## 🔖 Referências
+
+- [Domain-Driven Design - Com Flutter](https://medium.com/@jasonsantiagobutler/domain-driven-design-com-flutter-eba075dbf285)

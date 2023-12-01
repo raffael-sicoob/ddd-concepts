@@ -26,12 +26,26 @@ describe("Customer unit tests", () => {
     expect(customer.name).toBe("John Doe");
   });
 
-  it("should activate customer", () => {
+  it("should activate  and deactivate a customer", () => {
     // Arrange
     let customer = new Customer("133", "John", address, false);
     // Act
     customer.activate();
     // Assert
     expect(customer.isActive).toBe(true);
+
+    customer.deactivate();
+    expect(customer.isActive).toBe(false);
+  });
+
+  it("should add reward points", () => {
+    const customer = new Customer("133", "John", address, true);
+    expect(customer.rewardPoints).toBe(0);
+
+    customer.addRewardPoints(10);
+    expect(customer.rewardPoints).toBe(10);
+
+    customer.addRewardPoints(10);
+    expect(customer.rewardPoints).toBe(20);
   });
 });
