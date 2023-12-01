@@ -7,15 +7,15 @@
     "test:watch": "bun test --watch",
     "test:coverage": "bun test --coverage"
   },
+  "prisma": {
+    "schema": "src/infrastructure/db/prisma/schema.prisma"
+  },
   "devDependencies": {
     "bun-types": "latest",
     "prisma": "^5.6.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
-  },
-  "prisma": {
-    "schema": "src/infrastructure/db/prisma/schema.prisma"
   },
   "dependencies": {
     "@prisma/client": "5.6.0"
