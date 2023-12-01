@@ -1,7 +1,7 @@
-import { Customer } from "./entity/customer";
-import { Order } from "./entity/order";
-import { OrderItem } from "./entity/orderItem";
-import { Address } from "./value-objects/address";
+import { Customer } from "./domain/entity/customer";
+import { Order } from "./domain/entity/order";
+import { OrderItem } from "./domain/entity/orderItem";
+import { Address } from "./domain/value-objects/address";
 
 let address = new Address("Rua dos Bobos", 12, "88117013", "São Paulo");
 let customer = new Customer("133", "John", address, true);
