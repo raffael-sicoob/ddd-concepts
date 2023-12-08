@@ -17,3 +17,12 @@ model Product {
 
   @@map("products")
 }
+
+model Customer {
+  id      String  @id @default(uuid())
+  name    String
+  address String
+  active  Boolean
+
+  @@map("customers")
+}

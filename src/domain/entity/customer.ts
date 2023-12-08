@@ -36,6 +36,10 @@ export class Customer {
     return this._address.toString();
   }
 
+  get Address() {
+    return this._address;
+  }
+
   changeName(name: string) {
     this._name = name;
     this.validade();

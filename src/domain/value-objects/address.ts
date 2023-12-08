@@ -19,7 +19,7 @@ export class Address {
     }
   }
 
-  get streetName() {
+  get streetName(): string {
     return this.street;
   }
 
