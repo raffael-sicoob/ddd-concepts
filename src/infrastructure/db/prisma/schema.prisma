@@ -11,18 +11,54 @@ datasource db {
 }
 
 model Product {
-  id    String @id @default(uuid())
-  name  String
-  price Int
+  id        String      @id @default(uuid())
+  name      String
+  price     Int
+  OrderItem OrderItem[]
 
   @@map("products")
 }
 
 model Customer {
-  id      String  @id @default(uuid())
-  name    String
-  address String
-  active  Boolean
+  id           String  @id @default(uuid())
+  name         String
+  address      Address @relation(fields: [addressId], references: [id], onDelete: Cascade)
+  active       Boolean
+  rewardPoints Int
+  addressId    Int
+  Order        Order[]
 
   @@map("customers")
+}
+
+model Address {
+  id       Int        @id @default(autoincrement())
+  street   String
+  number   Int
+  zip      String
+  city     String
+  Customer Customer[]
+}
+
+model OrderItem {
+  id        String  @id @default(uuid())
+  name      String
+  price     Int
+  quantity  Int
+  product   Product @relation(fields: [productId], references: [id])
+  productId String
+  Order     Order[]
+
+  @@map("order_items")
+}
+
+model Order {
+  id         String    @id @default(uuid())
+  items      OrderItem @relation(fields: [itemsId], references: [id])
+  itemsId    String
+  customer   Customer  @relation(fields: [customerId], references: [id])
+  total      Int
+  customerId String
+
+  @@map("orders")
 }

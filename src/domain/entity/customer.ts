@@ -51,6 +51,10 @@ export class Customer {
     this._active = true;
   }
 
+  changeAddress(address: Address) {
+    this._address = address;
+  }
+
   deactivate() {
     this._active = false;
   }
