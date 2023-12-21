@@ -1,6 +1,5 @@
 import { Customer } from "@/domain/entity/customer";
 import { Address } from "@/domain/value-objects/address";
-import { PrismaClient } from "@prisma/client";
 import { afterEach, beforeEach, describe, expect, it } from "bun:test";
 import { randomUUID } from "crypto";
 import { prisma } from "../db/prisma/client";
@@ -9,10 +8,6 @@ import { CustomerRepository } from "./customer.repository";
 const address = new Address("Street 1", 1, "123-234", "City 1");
 describe("Customer repository unit tests", () => {
   beforeEach(() => {
-    const prisma = new PrismaClient({
-      datasourceUrl: Bun.env.DATABASE_URL,
-    });
-
     prisma.$connect();
   });
 

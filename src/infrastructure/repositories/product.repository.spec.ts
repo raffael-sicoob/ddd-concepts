@@ -1,17 +1,11 @@
 import { Product } from "@/domain/entity/product";
-import { PrismaClient } from "@prisma/client";
 import { afterEach, beforeEach, describe, expect, it } from "bun:test";
 import { randomUUID } from "crypto";
+import { prisma } from "../db/prisma/client";
 import { ProductRepository } from "./product.repository";
 
 describe("ProductRepository unit tests", () => {
-  let prisma: PrismaClient;
-
   beforeEach(() => {
-    prisma = new PrismaClient({
-      datasourceUrl: Bun.env.DATABASE_URL,
-    });
-
     prisma.$connect();
   });
 

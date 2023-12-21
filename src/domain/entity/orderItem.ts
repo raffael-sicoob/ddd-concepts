@@ -6,6 +6,18 @@ export class OrderItem {
     private _price: number,
     private _quantity: number
   ) {}
+
+  get id() {
+    return this._id;
+  }
+
+  get productId() {
+    return this._productId;
+  }
+
+  get name() {
+    return this._name;
+  }
   get price() {
     return this._price;
   }
