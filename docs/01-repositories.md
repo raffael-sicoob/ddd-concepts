@@ -26,3 +26,6 @@
 6. Organização: ajuda a organizar o código relacionado ao acesso a dados, separando-o do restante da aplicação.
 
 Em resumo, o padrão Repository é uma abstração que isola a lógica de acesso a dados, facilitando a manutenção, testabilidade e flexibilidade da aplicação.
+
+---
+⏭️ **Proxima Página:** [Domain Events](./02-domain-events.md)

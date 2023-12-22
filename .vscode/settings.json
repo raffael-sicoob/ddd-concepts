@@ -1,5 +1,8 @@
 {
   "cSpell.words": [
     "datasource"
-  ]
+  ],
+  "material-icon-theme.folders.associations": {
+    "@shared": "shared"
+  }
 }

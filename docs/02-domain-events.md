@@ -53,3 +53,9 @@ const dominioEventos = {
   // ...implementação de publicação de eventos...
 };
 ```
+
+## Domain Events - Components
+
+- Event - Eventos de Domínio que são instâncias que representam algo importante que aconteceu no domínio.
+- Handler - Executa um processo quando um evento é chamado.
+- Event Dispatcher - Responsável por armazenar e executar os handlers de um evento quando ele for disparado.
