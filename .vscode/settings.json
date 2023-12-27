@@ -2,9 +2,5 @@
 	"cSpell.words": ["datasource"],
 	"material-icon-theme.folders.associations": {
 		"@shared": "shared"
-	},
-	"a-file-icon-vscode.arrowTheme": "none",
-	"a-file-icon-vscode.foldersAssociations": {
-		"@shared": "shared"
 	}
 }

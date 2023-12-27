@@ -1,5 +1,5 @@
-import { Customer } from "@/domain/entity/customer";
-import { Address } from "@/domain/value-objects/address";
+import { Customer } from "@/domain/customer/entity/customer";
+import { Address } from "@/domain/customer/value-objects/address";
 import { afterEach, beforeEach, describe, expect, it } from "bun:test";
 import { randomUUID } from "crypto";
 import { prisma } from "../db/prisma/client";

@@ -1,8 +1,8 @@
-import { Customer } from "@/domain/entity/customer";
-import { Order } from "@/domain/entity/order";
-import { OrderItem } from "@/domain/entity/orderItem";
-import { Product } from "@/domain/entity/product";
-import { Address } from "@/domain/value-objects/address";
+import { Order } from "@/domain/checkout/entity/order";
+import { OrderItem } from "@/domain/checkout/entity/orderItem";
+import { Customer } from "@/domain/customer/entity/customer";
+import { Address } from "@/domain/customer/value-objects/address";
+import { Product } from "@/domain/product/entity/product";
 import { afterEach, beforeEach, describe, expect, it } from "bun:test";
 import { randomUUID } from "crypto";
 import { prisma } from "./../db/prisma/client";

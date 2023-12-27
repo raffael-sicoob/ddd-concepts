@@ -1,5 +1,5 @@
-import { CustomerRepositoryInterface } from "@/domain/repository/customer-repository-interface";
-import { Address } from "@/domain/value-objects/address";
+import { CustomerRepositoryInterface } from "@/domain/customer/repository/customer-repository-interface";
+import { Address } from "@/domain/customer/value-objects/address";
 import { Customer } from "../../domain/customer/entity/customer";
 import { prisma } from "../db/prisma/client";
 

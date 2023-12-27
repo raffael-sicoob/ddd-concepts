@@ -1,5 +1,5 @@
-import { ProductCreatedEvent } from "@/domain/product/product-created.event";
-import { SendEmailWhenProductIsCreatedHandler } from "@/domain/product/send-email.event";
+import { SendEmailWhenProductIsCreatedHandler } from "@/domain/product/event/handler/send-email.handler";
+import { ProductCreatedEvent } from "@/domain/product/event/product-created.event";
 import { describe, expect, it, spyOn } from "bun:test";
 import { EventDispatcher } from "./event-dispatcher";
 

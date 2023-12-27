@@ -1,4 +1,4 @@
-import { Address } from "@/domain/value-objects/address";
+import { Address } from "@/domain/customer/value-objects/address";
 import { describe, expect, it } from "bun:test";
 import { Customer } from "./customer";
 

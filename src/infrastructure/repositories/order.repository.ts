@@ -1,6 +1,6 @@
-import { Order } from "@/domain/entity/order";
-import { OrderItem } from "@/domain/entity/orderItem";
-import { OrderRepositoryInterface } from "@/domain/repository/order-repository-interface";
+import { Order } from "@/domain/checkout/entity/order";
+import { OrderItem } from "@/domain/checkout/entity/orderItem";
+import { OrderRepositoryInterface } from "@/domain/checkout/repository/order-repository-interface";
 import { prisma } from "../db/prisma/client";
 
 export class OrderRepository implements OrderRepositoryInterface {
