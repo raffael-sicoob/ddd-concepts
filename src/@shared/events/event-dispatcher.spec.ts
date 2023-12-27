@@ -1,6 +1,6 @@
-import { describe, expect, it, jest, spyOn } from "bun:test";
 import { ProductCreatedEvent } from "@/domain/product/product-created.event";
 import { SendEmailWhenProductIsCreatedHandler } from "@/domain/product/send-email.event";
+import { describe, expect, it, spyOn } from "bun:test";
 import { EventDispatcher } from "./event-dispatcher";
 
 describe("Domain events tests", () => {

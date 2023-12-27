@@ -1,6 +1,6 @@
 import { EventInterface } from "@/@shared/events/event.interface";
 
-export class ProductCreatedEvent implements EventInterface {
+export class CustomerCreatedEvent implements EventInterface {
 	dataTimeOccurred: Date;
 	eventData: any;
 
