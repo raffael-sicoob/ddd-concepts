@@ -1,4 +1,4 @@
-import { EventDispatcher } from "@/@shared/events/event-dispatcher";
+import { EventDispatcher } from "@/domain/@shared/events/event-dispatcher";
 import { describe, expect, it, spyOn } from "bun:test";
 import { CustomerCreatedEvent } from "./customer-created.event";
 import { SendMessagesWhenCustomerIsCreatedHandler } from "./handler/send-message.handler";

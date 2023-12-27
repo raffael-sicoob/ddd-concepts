@@ -1,4 +1,4 @@
-import { EventInterface } from "@/@shared/events/event.interface";
+import { EventInterface } from "@/domain/@shared/events/event.interface";
 
 export class UpdateAddressEvent implements EventInterface {
 	dataTimeOccurred: Date;

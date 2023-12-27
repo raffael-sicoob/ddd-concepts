@@ -1,4 +1,4 @@
-import { Product } from "./domain/entity/product";
+import { Product } from "./domain/product/entity/product";
 import { ProductRepository } from "./infrastructure/repositories/product.repository";
 
 const productRepository = new ProductRepository();

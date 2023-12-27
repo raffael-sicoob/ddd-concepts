@@ -1,4 +1,4 @@
-import { EventHandlerInterface } from "@/@shared/events/event-handler.interface";
+import { EventHandlerInterface } from "@/domain/@shared/events/event-handler.interface";
 import { CustomerCreatedEvent } from "../customer-created.event";
 
 export class SendMessagesWhenCustomerIsCreatedHandler2

@@ -1,4 +1,4 @@
-import { EventDispatcher } from "@/@shared/events/event-dispatcher";
+import { EventDispatcher } from "@/domain/@shared/events/event-dispatcher";
 import { describe, expect, it, spyOn } from "bun:test";
 import { SendConsoleLogWhenCustomerIsUpdatedHandler } from "./handler/send-console-log.handler";
 import { UpdateAddressEvent } from "./update-address.event";
