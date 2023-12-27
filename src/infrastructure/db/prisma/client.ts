@@ -1,5 +1,5 @@
-import { PrismaClient } from "@prisma/client";
 import { spawnSync } from "child_process";
+import { PrismaClient } from "@prisma/client";
 
 export const prisma = new PrismaClient();
 
