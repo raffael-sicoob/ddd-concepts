@@ -1,10 +1,10 @@
+import { afterEach, beforeEach, describe, expect, it } from "bun:test";
+import { randomUUID } from "crypto";
 import { Order } from "@/domain/checkout/entity/order";
 import { OrderItem } from "@/domain/checkout/entity/orderItem";
 import { Customer } from "@/domain/customer/entity/customer";
 import { Address } from "@/domain/customer/value-objects/address";
 import { Product } from "@/domain/product/entity/product";
-import { afterEach, beforeEach, describe, expect, it } from "bun:test";
-import { randomUUID } from "crypto";
 import { prisma } from "./../db/prisma/client";
 import { CustomerRepository } from "./customer.repository";
 import { OrderRepository } from "./order.repository";

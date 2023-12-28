@@ -1,6 +1,6 @@
-import { Product } from "@/domain/product/entity/product";
 import { afterEach, beforeEach, describe, expect, it } from "bun:test";
 import { randomUUID } from "crypto";
+import { Product } from "@/domain/product/entity/product";
 import { prisma } from "../db/prisma/client";
 import { ProductRepository } from "./product.repository";
 

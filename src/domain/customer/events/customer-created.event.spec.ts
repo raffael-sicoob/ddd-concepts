@@ -1,5 +1,5 @@
-import { EventDispatcher } from "@/domain/@shared/events/event-dispatcher";
 import { describe, expect, it, spyOn } from "bun:test";
+import { EventDispatcher } from "@/domain/@shared/events/event-dispatcher";
 import { CustomerCreatedEvent } from "./customer-created.event";
 import { SendMessagesWhenCustomerIsCreatedHandler } from "./handler/send-message.handler";
 import { SendMessagesWhenCustomerIsCreatedHandler2 } from "./handler/send-message2.handler";
