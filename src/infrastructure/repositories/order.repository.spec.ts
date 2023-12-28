@@ -170,4 +170,54 @@ describe("OrderRepository unit tests", () => {
 
 		expect(orderModel).toStrictEqual(order);
 	});
+
+	it("should find all orders", async () => {
+		const customerRepository = new CustomerRepository();
+		const customer = new Customer(randomUUID(), "John", address, true);
+		await customerRepository.create(customer);
+
+		const productRepository = new ProductRepository();
+		const product = new Product(randomUUID(), "Product 1", 10);
+		await productRepository.create(product);
+
+		const orderItem1 = new OrderItem(
+			randomUUID(),
+			product.id,
+			product.name,
+			product.price,
+			2,
+		);
+
+		const orderItem2 = new OrderItem(
+			randomUUID(),
+			product.id,
+			product.name,
+			product.price,
+			10,
+		);
+
+		const orderItem3 = new OrderItem(
+			randomUUID(),
+			product.id,
+			product.name,
+			product.price,
+			5,
+		);
+
+		const order1 = new Order(randomUUID(), customer.id, [orderItem1]);
+		const order2 = new Order(randomUUID(), customer.id, [
+			orderItem2,
+			orderItem3,
+		]);
+
+		const orderRepository = new OrderRepository();
+		await orderRepository.create(order1);
+		await orderRepository.create(order2);
+
+		const orders = await orderRepository.findAll();
+
+		expect(orders).toHaveLength(2);
+		expect(orders).toContainEqual(order1);
+		expect(orders[1].items).toBeArrayOfSize(2);
+	});
 });

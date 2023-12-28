@@ -69,4 +69,29 @@ export class OrderRepository implements OrderRepositoryInterface {
 			},
 		});
 	}
+
+	async findAll(): Promise<Order[]> {
+		const ordersModel = await prisma.order.findMany({
+			include: {
+				items: true,
+			},
+		});
+
+		if (!ordersModel) {
+			throw new Error("Orders not found");
+		}
+
+		return ordersModel.map((orderModel) => {
+			const orderItems = orderModel.items.map((item) => {
+				return new OrderItem(
+					item.id,
+					item.productId,
+					item.name,
+					item.price,
+					item.quantity,
+				);
+			});
+			return new Order(orderModel.id, orderModel.customerId, orderItems);
+		});
+	}
 }
