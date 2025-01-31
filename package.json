@@ -13,12 +13,12 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.4.1",
-		"@types/bun": "^1.0.0",
+		"@types/bun": "^1.2.1",
 		"bun-types": "latest",
 		"prisma": "latest"
 	},
 	"peerDependencies": {
-		"typescript": "^5.0.0"
+		"typescript": "^5.3.2"
 	},
 	"dependencies": {
 		"@prisma/client": "latest"
