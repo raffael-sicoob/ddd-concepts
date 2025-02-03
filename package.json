@@ -13,7 +13,7 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.4.1",
-		"@types/bun": "^1.2.1",
+		"@types/bun": "^1.2.2",
 		"bun-types": "latest",
 		"prisma": "latest"
 	},

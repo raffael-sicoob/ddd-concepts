@@ -35,4 +35,28 @@ describe("Unit test create customer use case", () => {
       address: input.address,
     });
   });
+
+  it("should throw an error when name is empty", async () => {
+    const customerRepository = MockRepository();
+
+    const customerCreateUseCase = new CreateCustomerUseCase(customerRepository);
+
+    input.name = "";
+
+    expect(
+      Promise.resolve(customerCreateUseCase.execute(input))
+    ).rejects.toThrow("Name is required");
+  });
+
+  it("should throw an error when street is empty", async () => {
+    const customerRepository = MockRepository();
+
+    const customerCreateUseCase = new CreateCustomerUseCase(customerRepository);
+
+    input.address.street = "";
+
+    expect(
+      Promise.resolve(customerCreateUseCase.execute(input))
+    ).rejects.toThrow("Address is not valid. All fields are required.");
+  });
 });
